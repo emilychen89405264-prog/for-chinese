@@ -260,7 +260,9 @@ export const LEARNING_CONTENT: Record<Grade, Record<Category, Question[]>> = {
         explanation: '晴朗的天空通常是藍色的。' 
       }
     ],
-    [Category.WRITING]: []
+    [Category.WRITING]: [
+      { id: 'g1-w1', type: 'cloze', text: '我___喜歡吃蘋果。', options: ['很', '不', '都', '也'], correctAnswer: 0, explanation: '「很」用來表示程度。' }
+    ]
   },
   [Grade.G2]: {
     [Category.PHONETICS]: [
@@ -421,20 +423,82 @@ export const LEARNING_CONTENT: Record<Grade, Record<Category, Question[]>> = {
         explanation: '廚房是做飯的地方。' 
       }
     ],
-    [Category.WRITING]: []
+    [Category.WRITING]: [
+      { id: 'g2-w1', type: 'cloze', text: '小明___跑步，___游泳。', options: ['喜歡/也喜歡', '不喜歡/卻喜歡', '雖然/但是', '因為/所以'], correctAnswer: 0, explanation: '表示並列喜歡的兩件事。' }
+    ]
   },
   [Grade.G3]: {
     [Category.PHONETICS]: [
       { id: 'g3-p1', type: 'audio', text: '請聽音辨字：', audioText: '環境', options: ['乾淨', '環境', '眼鏡', '鏡子'], correctAnswer: 1, explanation: '這是「環境」。' }
     ],
-    [Category.CHARACTERS]: [],
-    [Category.VOCABULARY]: [],
-    [Category.READING]: [],
-    [Category.WRITING]: []
+    [Category.CHARACTERS]: [
+      { id: 'g3-c1', type: 'stroke', text: '請觀察「學」的寫法：', character: '學', bopomofo: 'ㄒㄩㄝˊ', definition: '學習、學問。', exampleSentence: '我們在學校學習新知識。', options: ['看完了'], correctAnswer: 0, explanation: '「學」字上半部較為複雜，注意筆畫順序。' },
+      { id: 'g3-c2', type: 'stroke', text: '請觀察「校」的寫法：', character: '校', bopomofo: 'ㄒㄧㄠˋ', definition: '學校。', exampleSentence: '我們的校園很大。', options: ['看完了'], correctAnswer: 0, explanation: '左邊是木部，右邊是交。' }
+    ],
+    [Category.VOCABULARY]: [
+      { id: 'g3-v1', type: 'matching', text: '請將成語與其意義配對：', matchingPairs: [{ left: '守株待兔', right: '妄想不勞而獲' }, { left: '井底之蛙', right: '見識淺薄' }, { left: '畫蛇添足', right: '多此一舉' }], options: [], correctAnswer: 'matching', explanation: '常見的寓言成語。', bopomofo: '', exampleSentence: '我們做事要腳踏實地。' },
+      { id: 'g3-v2', type: 'matching', text: '請將職業與工作內容配對：', matchingPairs: [{ left: '醫生', right: '治病' }, { left: '教師', right: '教書' }, { left: '警察', right: '抓小偷' }], options: [], correctAnswer: 'matching', explanation: '各行各業的工作內容。', bopomofo: '', exampleSentence: '醫生負責醫治病人。' }
+    ],
+    [Category.READING]: [
+      { id: 'g3-r1', type: 'cloze', text: '圖書館裡有很多___，我們應該保持安靜。', options: ['玩具', '書籍', '零食', '衣服'], correctAnswer: 1, explanation: '圖書館是看書的地方。' },
+      { id: 'g3-r2', type: 'cloze', text: '這本故事書的___很有趣，讓人想一直看下去。', options: ['內容', '封面', '書名', '價格'], correctAnswer: 0, explanation: '吸引人的是書的內容。' }
+    ],
+    [Category.WRITING]: [
+      { id: 'g3-w1', type: 'cloze', text: '因為下雨了，___。', options: ['所以我沒帶傘', '所以我取消了郊遊', '所以我很高興出門', '所以我去游泳'], correctAnswer: 1, explanation: '下雨通常會導致戶外活動取消。' }
+    ]
   },
-  [Grade.G4]: { [Category.PHONETICS]: [], [Category.CHARACTERS]: [], [Category.VOCABULARY]: [], [Category.READING]: [], [Category.WRITING]: [] },
-  [Grade.G5]: { [Category.PHONETICS]: [], [Category.CHARACTERS]: [], [Category.VOCABULARY]: [], [Category.READING]: [], [Category.WRITING]: [] },
-  [Grade.G6]: { [Category.PHONETICS]: [], [Category.CHARACTERS]: [], [Category.VOCABULARY]: [], [Category.READING]: [], [Category.WRITING]: [] }
+  [Grade.G4]: { 
+    [Category.PHONETICS]: [
+      { id: 'g4-p1', type: 'audio', text: '請聽音辨字：', audioText: '觀察', options: ['觀察', '警察', '檢查', '考察'], correctAnswer: 0, explanation: '這是「觀察」。' },
+      { id: 'g4-p2', type: 'audio', text: '請聽音辨字：', audioText: '勇敢', options: ['勇敢', '永遠', '擁抱', '游泳'], correctAnswer: 0, explanation: '這是「勇敢」。' }
+    ], 
+    [Category.CHARACTERS]: [
+      { id: 'g4-c1', type: 'stroke', text: '請觀察「麗」的寫法：', character: '麗', bopomofo: 'ㄌㄧˋ', definition: '美好、好看。', exampleSentence: '這是一幅美麗的畫。', options: ['看完了'], correctAnswer: 0, explanation: '「麗」字的筆畫較多，要注意結構。' }
+    ], 
+    [Category.VOCABULARY]: [
+      { id: 'g4-v1', type: 'matching', text: '請將近義詞配對：', matchingPairs: [{ left: '開心', right: '快樂' }, { left: '美麗', right: '漂亮' }, { left: '聰明', right: '機智' }], options: [], correctAnswer: 'matching', explanation: '這些詞語的意思相近。', bopomofo: '', exampleSentence: '他是一個聰明又機智的孩子。' }
+    ], 
+    [Category.READING]: [
+      { id: 'g4-r1', type: 'cloze', text: '這篇文章的___是告訴我們要愛護環境。', options: ['主旨', '標題', '作者', '結尾'], correctAnswer: 0, explanation: '文章傳達的中心思想稱為主旨。' }
+    ], 
+    [Category.WRITING]: [
+      { id: 'g4-w1', type: 'cloze', text: '他___功課好，___喜歡幫助別人。', options: ['不但/而且', '因為/所以', '雖然/但是', '如果/就'], correctAnswer: 0, explanation: '「不但...而且...」表示遞進關係。' }
+    ] 
+  },
+  [Grade.G5]: { 
+    [Category.PHONETICS]: [
+      { id: 'g5-p1', type: 'audio', text: '請聽音辨字：', audioText: '猶豫', options: ['由於', '猶豫', '魷魚', '優裕'], correctAnswer: 1, explanation: '這是「猶豫」。' }
+    ], 
+    [Category.CHARACTERS]: [
+      { id: 'g5-c1', type: 'stroke', text: '請觀察「龜」的寫法：', character: '龜', bopomofo: 'ㄍㄨㄟ', definition: '爬行動物。', exampleSentence: '烏龜爬得很慢。', options: ['看完了'], correctAnswer: 0, explanation: '「龜」字筆畫繁多，需仔細觀察。' }
+    ], 
+    [Category.VOCABULARY]: [
+      { id: 'g5-v1', type: 'matching', text: '請將成語與人物配對：', matchingPairs: [{ left: '臥薪嘗膽', right: '句踐' }, { left: '破釜沉舟', right: '項羽' }, { left: '三顧茅廬', right: '劉備' }], options: [], correctAnswer: 'matching', explanation: '這些成語都有歷史典故。', bopomofo: '', exampleSentence: '他有著臥薪嘗膽的精神。' }
+    ], 
+    [Category.READING]: [
+      { id: 'g5-r1', type: 'cloze', text: '作者透過這首詩，抒發了對故鄉的___之情。', options: ['思念', '憤怒', '恐懼', '悲傷'], correctAnswer: 0, explanation: '詩歌常表達對家鄉的思念。' }
+    ], 
+    [Category.WRITING]: [
+      { id: 'g5-w1', type: 'cloze', text: '___遇到困難，我們___不能放棄。', options: ['即使/也', '不但/而且', '因為/所以', '如果/就'], correctAnswer: 0, explanation: '「即使...也...」表示假設的讓步。' }
+    ] 
+  },
+  [Grade.G6]: { 
+    [Category.PHONETICS]: [
+      { id: 'g6-p1', type: 'audio', text: '請聽音辨字：', audioText: '躊躇', options: ['躊躇', '抽搐', '稠密', '醜陋'], correctAnswer: 0, explanation: '這是「躊躇」。' }
+    ], 
+    [Category.CHARACTERS]: [
+      { id: 'g6-c1', type: 'stroke', text: '請觀察「鬱」的寫法：', character: '鬱', bopomofo: 'ㄩˋ', definition: '茂盛、停滯。', exampleSentence: '他最近心情很鬱悶。', options: ['看完了'], correctAnswer: 0, explanation: '「鬱」是筆畫最多的常用字之一。' }
+    ], 
+    [Category.VOCABULARY]: [
+      { id: 'g6-v1', type: 'matching', text: '請將文學體裁與特點配對：', matchingPairs: [{ left: '詩歌', right: '講究韻律' }, { left: '小說', right: '有故事情節' }, { left: '散文', right: '形散神不散' }], options: [], correctAnswer: 'matching', explanation: '不同的文學體裁有其獨特特徵。', bopomofo: '', exampleSentence: '他喜歡閱讀各種體裁的作品。' }
+    ], 
+    [Category.READING]: [
+      { id: 'g6-r1', type: 'cloze', text: '這篇議論文的___非常嚴密，讓人無法反駁。', options: ['邏輯', '情感', '修辭', '排版'], correctAnswer: 0, explanation: '議論文最重要的是邏輯嚴密。' }
+    ], 
+    [Category.WRITING]: [
+      { id: 'g6-w1', type: 'cloze', text: '___在這裡抱怨，___趕快想辦法解決問題。', options: ['與其/不如', '寧可/也不', '既然/就', '不僅/還'], correctAnswer: 0, explanation: '「與其...不如...」表示在比較中選擇更好的一方。' }
+    ] 
+  }
 };
 
 export const BOSSES: Record<Grade, Boss[]> = {
@@ -497,5 +561,48 @@ export const BOSSES: Record<Grade, Boss[]> = {
       ] 
     }
   ],
-  [Grade.G3]: [], [Grade.G4]: [], [Grade.G5]: [], [Grade.G6]: []
+  [Grade.G3]: [
+    { 
+      id: 'g3-b1', 
+      name: '成語大師', 
+      description: '第一關：成語挑戰！', 
+      questions: [
+        { id: 'g3-b1-q1', type: 'cloze', text: '他做事總是___，不切實際。', options: ['守株待兔', '腳踏實地', '刻苦耐勞', '精益求精'], correctAnswer: 0, explanation: '守株待兔比喻妄想不勞而獲。' },
+        { id: 'g3-b1-q2', type: 'cloze', text: '我們應該___，不要做井底之蛙。', options: ['增廣見聞', '閉門造車', '坐井觀天', '目光如豆'], correctAnswer: 0, explanation: '增廣見聞可以擴展視野。' }
+      ] 
+    }
+  ], 
+  [Grade.G4]: [
+    { 
+      id: 'g4-b1', 
+      name: '近義詞怪獸', 
+      description: '第一關：詞語辨析！', 
+      questions: [
+        { id: 'g4-b1-q1', type: 'cloze', text: '這朵花開得真___。', options: ['美麗', '難看', '枯萎', '醜陋'], correctAnswer: 0, explanation: '美麗是稱讚花朵的好詞。' },
+        { id: 'g4-b1-q2', type: 'cloze', text: '考試時要___，不要粗心大意。', options: ['仔細', '隨便', '馬虎', '分心'], correctAnswer: 0, explanation: '仔細是粗心的反義詞。' }
+      ] 
+    }
+  ], 
+  [Grade.G5]: [
+    { 
+      id: 'g5-b1', 
+      name: '典故守護者', 
+      description: '第一關：歷史典故！', 
+      questions: [
+        { id: 'g5-b1-q1', type: 'cloze', text: '「破釜沉舟」這個成語與哪位歷史人物有關？', options: ['項羽', '劉邦', '韓信', '張良'], correctAnswer: 0, explanation: '破釜沉舟是項羽在鉅鹿之戰中的典故。' },
+        { id: 'g5-b1-q2', type: 'cloze', text: '「三顧茅廬」是誰請誰出山？', options: ['劉備請諸葛亮', '曹操請關羽', '孫權請周瑜', '項羽請范增'], correctAnswer: 0, explanation: '劉備三顧茅廬請諸葛亮。' }
+      ] 
+    }
+  ], 
+  [Grade.G6]: [
+    { 
+      id: 'g6-b1', 
+      name: '文學魔王', 
+      description: '最終挑戰：綜合文學素養！', 
+      questions: [
+        { id: 'g6-b1-q1', type: 'cloze', text: '「床前明月光」是哪位詩人的作品？', options: ['李白', '杜甫', '白居易', '蘇軾'], correctAnswer: 0, explanation: '這是李白的《靜夜思》。' },
+        { id: 'g6-b1-q2', type: 'cloze', text: '《西遊記》的作者是誰？', options: ['吳承恩', '羅貫中', '施耐庵', '曹雪芹'], correctAnswer: 0, explanation: '《西遊記》作者為吳承恩。' }
+      ] 
+    }
+  ]
 };
