@@ -577,7 +577,7 @@ export default function App() {
 
               {/* 關卡細節頁面 (第三層，維持乾淨底圖) */}
               {view === 'level-detail' && (
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://raw.githubusercontent.com/emilychen89405264-prog/for-chinese/main/mainpage.png')` }}>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://raw.githubusercontent.com/emilychen89405264-prog/for-chinese/main/Mainpage.png')` }}>
                   <button onClick={() => setView('map')} className="absolute top-4 left-4 z-[100] bg-black/60 p-2 rounded-full border border-white/4 hover:scale-110 transition-all cursor-pointer"><ChevronLeft size={30}/></button>
                   
                   {/* 第三層右上角的手動存檔按鈕 */}
